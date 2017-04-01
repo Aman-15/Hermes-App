@@ -9,17 +9,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.escapeestudios.hermes.FriendsFrag;
 import com.escapeestudios.hermes.MainActivity;
 import com.escapeestudios.hermes.R;
-import com.escapeestudios.hermes.UserExtra;
-//import com.escapeestudios.hermes.toAdd;
 import com.escapeestudios.hermes.Transaction;
-//import com.escapeestudios.hermes.toAdd;
 import com.escapeestudios.hermes.toAdd_2;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

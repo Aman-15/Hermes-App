@@ -29,7 +29,7 @@ public class toAdd_2 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_to_add);
+        setContentView(R.layout.activity_to_add_2);
 
         mFirebaseDatabase = FirebaseDatabase.getInstance();
         mDatabaseReference = mFirebaseDatabase.getReference().child(TRANSACTION);

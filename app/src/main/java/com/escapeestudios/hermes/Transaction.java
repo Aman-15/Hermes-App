@@ -30,15 +30,14 @@ public class Transaction {
         this.acceptorUID = acceptorUID;
     }
 
-
     public String toString() {
         String out = description + " between you and " + name + "\n";
         if (whoOwesWho.equals("I owe him"))
-            out += "You owe him " + amount;
+            out += "You owe him " + amount + "\nKarma -10";
         else if (whoOwesWho.equals("He owes me"))
-            out += "He owes you " + amount;
+            out += "He owes you " + amount + "\nKarma +10";
         else
-            out += "Equal split of " + amount;
+            out += "Equal split of " + amount + "\nKarma +5";
 
         return out;
     }

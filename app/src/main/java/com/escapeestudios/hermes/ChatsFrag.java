@@ -72,20 +72,19 @@ public class ChatsFrag extends Fragment {
 
         listView = (ListView)view.findViewById(R.id.chat_history_list);
         listView.setClickable(true);
-        try{
+        try {
             chatDatabaseHelper = new ChatDatabaseHelper(getActivity().getApplicationContext());
             dbChat = chatDatabaseHelper.getReadableDatabase();
 
             queryAgain();
 //            if(cursorMessages.moveToFirst())
 //            {
-            adapter = new SimpleCursorAdapter(getContext(), android.R.layout.simple_list_item_1, cursorChats,
-                    new String[]{ChatDatabaseHelper.FRIENDNAME, ChatDatabaseHelper.FRIENDUID},new int[]{android.R.id.text1, android.R.id.text2}, 0);
+            adapter = new SimpleCursorAdapter(getContext(), R.layout.chatlayout, cursorChats,
+                    new String[]{ChatDatabaseHelper.FRIENDNAME, ChatDatabaseHelper.LASTMESSAGE},new int[]{R.id.simple_list_item_1, R.id.simple_list_item_2}, 0);
             listView.setAdapter(adapter);
 //            }
 
-        } catch (SQLiteException e)
-        {
+        } catch (SQLiteException e) {
             Toast.makeText(getActivity(), "Database Unavailable", Toast.LENGTH_SHORT).show();
             Log.e("BLA",e.toString());
         }
